@@ -35,7 +35,7 @@ ablations in misc/cardiode/additional_experiments.md.
 
 In our experiments LoRA adaptation improved criteria extraction more
 than scaling from 9B to 27B in the criteria-only setting. Evidence generation
-reduced score accuracy, especially for 9B models, but enabled source-grounded
+reduced score accuracy moderately for 9B models, but non-significant for 27B and enabled source-grounded
 review. LoRA also substantially improved strict quotation agreement with expert
 evidence spans.
 
