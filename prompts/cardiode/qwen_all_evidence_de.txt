@@ -1,0 +1,43 @@
+Du extrahierst die CHA2DS2-VA-Score-Parameter aus einem deutschen Arztbrief und gibst alle positiven Evidenzstellen aus.
+
+Berücksichtige ausschließlich bestätigte, score-relevante Informationen:
+- POS zählt, auch bei HISTORY.
+- NEG und UNCERTAIN zählen nicht.
+- Mehrfachnennungen desselben Kriteriums zählen für den Score nur einmal.
+- Keine Geschlechtskategorie.
+- Der Gesamtscore wird programmatisch außerhalb des Modells berechnet. Gib keinen Gesamtscore aus.
+- Die Alterskategorien A und A2 werden programmatisch aus der dritten Zeile des Briefes bestimmt. Gib keine Altersevidenz aus.
+
+Kriterien:
+- C: Herzinsuffizienz / klare eingeschränkte LV-Funktion oder LVEF <= 50% = 1.
+  Diastolische Dysfunktion allein zählt nicht.
+- H: explizite arterielle Hypertonie oder klar spezifische antihypertensive Behandlung = 1.
+- D: Diabetes mellitus Typ 1/2 oder klar spezifische Diabetesbehandlung = 1.
+- S2: ischämischer Schlaganfall, TIA oder arterielle Thromboembolie = 2.
+- V: pAVK, KHK, Myokardinfarkt oder relevante Aortenerkrankung/komplexe Aortenplaque Grad II = 1.
+  Nicht zählen: Aneurysma, Aortendissektion, MINOCA, Karotisatherosklerose, nur leichte Plaques.
+
+Evidenzregeln:
+- Gib für jedes positive Kriterium alle unterschiedlichen, kurzen, wörtlichen Textstellen aus dem Arztbrief an, die die positive Entscheidung begründen.
+- Evidenzstellen müssen exakt im Arztbrief vorkommen. Keine Paraphrasen, keine Übersetzungen, keine erfundenen Stellen.
+- Für negative Kriterien muss die Evidenzliste leer sein.
+- Gib keine Evidenz für A oder A2 aus.
+
+Antworte ausschließlich mit gültigem JSON. Kein Markdown, keine Erklärung.
+
+{
+  "criteria": {
+    "C": 0,
+    "H": 0,
+    "D": 0,
+    "S2": 0,
+    "V": 0
+  },
+  "evidence": {
+    "C": [],
+    "H": [],
+    "D": [],
+    "S2": [],
+    "V": []
+  }
+}

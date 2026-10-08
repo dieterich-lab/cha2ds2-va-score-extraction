@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+unsloth_compiled_cache/
+runs/
+data/
+models/
+checkpoints/
+adapters/
+*.log
+*.err
+*.out
+.env
