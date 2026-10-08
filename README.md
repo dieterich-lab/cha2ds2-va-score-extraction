@@ -28,7 +28,7 @@ TODO
   against expert annotations, and post-hoc sufficiency/comprehensiveness tests.
 
 CARDIO:DE is available for research use via [heiDATA: 10.11588/data/AFYQDY](https://doi.org/10.11588/data/AFYQDY).
-The corpus is split into `CARDIODE400_main` and `CARDIODE100_heldout`; CARDIODE100 annotations are kept in-house. Hence, for reproducible the manuscript reports CARDIODE400 three-fold
+The corpus is split into `CARDIODE400_main` and `CARDIODE100_heldout`. CARDIODE100 annotations are kept in-house. Hence, for reproducibility the manuscript reports CARDIODE400 three-fold
 cross-validation results. Fixed
 CARDIODE400-train/CARDIODE100-test experiments are documented as supplementary
 ablations in misc/cardiode/additional_experiments.md.
