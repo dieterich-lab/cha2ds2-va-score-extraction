@@ -10,6 +10,10 @@ The experiments compare a physician-curated rule baseline with Qwen 3.5 9B and
 as a criteria-only extractor and as an evidence-generating extractor that must
 return source quotations for the text-derived criteria.
 
+## CITATION
+
+TODO
+
 ## Study Design
 
 - Dataset: CARDIO:DE400 letters with an expert CHA2DS2-VA annotation layer.
