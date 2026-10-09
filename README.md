@@ -31,7 +31,7 @@ CARDIO:DE is available for research use via [heiDATA: 10.11588/data/AFYQDY](http
 The corpus is split into `CARDIODE400_main` and `CARDIODE100_heldout`. CARDIODE100 annotations are kept in-house. Hence, for reproducibility the manuscript reports CARDIODE400 three-fold
 cross-validation results. Fixed
 CARDIODE400-train/CARDIODE100-test experiments are documented as supplementary
-ablations in misc/cardiode/additional_experiments.md.
+ablations in [misc/cardiode/additional_results.md](misc/cardiode/additional_results.md)..
 
 In our experiments LoRA adaptation improved criteria extraction more
 than scaling from 9B to 27B in the criteria-only setting. Evidence generation
