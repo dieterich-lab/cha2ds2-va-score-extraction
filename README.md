@@ -43,15 +43,15 @@ evidence spans.
 
 The following table summarizes the CARDIO:DE400 three-fold cross-validation
 results. `C` means criteria-only output and `E` means evidence-generating
-output. RMSE is retained here as an additional score-error metric.
+output. MAE is the mean absolute error of the total score.
 
-| System | Score accuracy C/E | RMSE C/E | Mean criterion accuracy C/E | Micro-F1 C/E |
+| System | Score accuracy C/E | MAE C/E | Mean criterion accuracy C/E | Micro-F1 C/E |
 | --- | --- | --- | --- | --- |
-| Rules | 0.440 / - | 1.015 / - | 0.874 / - | 0.852 / - |
-| Qwen 9B zero-shot | 0.775 / 0.695 | 0.633 / 0.901 | 0.962 / 0.948 | 0.954 / 0.936 |
-| Qwen 27B zero-shot | 0.845 / 0.798 | 0.464 / 0.512 | 0.975 / 0.967 | 0.969 / 0.959 |
-| Qwen 9B LoRA | 0.905 / 0.860 | 0.412 / 0.545 | 0.985 / 0.977 | 0.982 / 0.971 |
-| Qwen 27B LoRA | 0.903 / 0.895 | 0.406 / 0.415 | 0.985 / 0.983 | 0.981 / 0.979 |
+| Rules | 0.440 / - | 0.695 / - | 0.874 / - | 0.852 / - |
+| Qwen 9B zero-shot | 0.775 / 0.695 | 0.275 / 0.458 | 0.962 / 0.948 | 0.954 / 0.936 |
+| Qwen 27B zero-shot | 0.845 / 0.798 | 0.175 / 0.223 | 0.975 / 0.967 | 0.969 / 0.959 |
+| Qwen 9B LoRA | 0.905 / 0.860 | 0.120 / 0.188 | 0.985 / 0.977 | 0.982 / 0.971 |
+| Qwen 27B LoRA | 0.903 / 0.895 | **0.12** / 0.128 | 0.985 / 0.983 | 0.981 / 0.979 |
 
 Additional supplementary result tables, including fixed-test ablations,
 component-level accuracies, NER ablations, evidence plausibility, and evidence
