@@ -2,9 +2,7 @@
 
 This file provides supplementary result documentation for the manuscript
 "Evidence-grounded CHA2DS2-VA extraction from German clinical letters using
-locally deployable language models". It contains additional tables from the
-experiment logs, including fixed-test ablations, RMSE values, component-level
-accuracies, NER ablations, evidence plausibility, and evidence faithfulness.
+locally deployable language models". It contains additional results and metrics, including CARDIO:DE100 results, RMSE values, component-level accuracies, NER ablations, evidence plausibility, and evidence faithfulness.
 
 Source summary:
 
@@ -15,15 +13,11 @@ Source summary:
 - Evidence-generating systems: Qwen 3.5 9B/27B zero-shot and LoRA, plus one
   additional Qwen 3.8 27B LoRA all-evidence run in the aggregate score table.
 
-CARDIO:DE can be requested for research use via the
-[CARDIO:DE corpus page](https://dieterich-lab.github.io/cardiode/) and
-[heiDATA DOI 10.11588/data/AFYQDY](https://doi.org/10.11588/data/AFYQDY).
+CARDIO:DE can be requested for research use via [heiDATA: DOI 10.11588/data/AFYQDY](https://doi.org/10.11588/data/AFYQDY).
 The public corpus distribution contains `CARDIODE400_main` and
-`CARDIODE100_heldout`. CARDIODE100 text can be requested, but its CHA2DS2-VA
-annotations are held in-house and are not published. For this reason, the
-manuscript reports CARDIODE400 three-fold cross-validation as the reproducible
+`CARDIODE100_heldout`. CARDIODE100 text can be requested, but its annotations are held in-house and are not published. For this reason, the manuscript reports CARDIODE400 three-fold cross-validation as the reproducible
 primary result. The fixed CARDIODE400-train/CARDIODE100-test experiments below
-are supplementary ablation results and are not reported as main manuscript
+are supplementary results and not reported as main manuscript
 results.
 
 ## Metric Definitions
