@@ -1,17 +1,15 @@
-# CARDIO:DE and Charite Additional Experiment Results
+# CARDIO:DE Additional Experiment Results
 
 This file provides supplementary result documentation for the manuscript
 "Evidence-grounded CHA2DS2-VA extraction from German clinical letters using
 locally deployable language models". It contains additional results and metrics,
 including CARDIO:DE100 results, RMSE values, component-level accuracies, NER
-ablations, evidence plausibility, evidence faithfulness, and Charite data set
-experiments.
+ablations, evidence plausibility, and evidence faithfulness.
 
 Source summary:
 
 - `CARDIODE400_CV3`: 400 letters in three-fold cross-validation.
 - `CARDIODE100_FIXED_TEST`: 100 internally held-out letters.
-- Charite atrial fibrillation data set: 27B evaluation on 179 letters.
 - Criteria-only systems: physician-curated rules, Qwen 3.5 9B/27B zero-shot,
   and Qwen 3.5 9B/27B LoRA.
 - Evidence-generating systems: Qwen 3.5 9B/27B zero-shot and LoRA, plus one
@@ -292,12 +290,3 @@ Faithfulness was evaluated for the five text-derived criteria (`C`, `H`, `D`,
 | Qwen 27B LoRA all evidence | H | 310 | 307 | 307 | 241 | 0.8850 | 1.0000 | 0.7850 | 0.2150 |
 | Qwen 27B LoRA all evidence | S2 | 51 | 46 | 40 | 34 | 0.1600 | 0.8696 | 0.7391 | 0.2609 |
 | Qwen 27B LoRA all evidence | V | 281 | 280 | 280 | 87 | 1.8775 | 1.0000 | 0.3107 | 0.6893 |
-
-## Charite Data Set Results
-
-Updated Qwen 3.5 27B results use all 179 letters. With the original reference,
-LoRA achieved 0.8380 exact score accuracy, 0.5069 RMSE, and 0.8981 Krippendorff
-alpha; the age-corrected sensitivity analysis yielded 0.8547, 0.4025, and
-0.9159, respectively. Predictions were unchanged. See the
-[updated Charite results](../roeschl/additional_results.md) for both references
-and per-criterion accuracies.

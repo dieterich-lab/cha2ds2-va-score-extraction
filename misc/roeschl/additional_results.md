@@ -1,7 +1,8 @@
-# Charite Data Set Results
+# Roeschl et al. Data Set Results
 
 The updated supplementary criteria-only CHA2DS2-VA evaluation uses all 179
-Charite atrial fibrillation letters and Qwen 3.5 27B zero-shot and LoRA.
+atrial fibrillation letters from Roeschl et al. and compares Qwen 3.5 27B
+zero-shot and LoRA.
 Original-reference and age-corrected results evaluate the same predictions
 on the same letters.
 
@@ -13,14 +14,14 @@ The source study evaluated CHA2DS2-VASc; the experiments documented here
 concern CHA2DS2-VA.
 
 Associated source repository:
-[charite-iaim/mcp-risk-server](https://github.com/charite-iaim/mcp-risk-server).
+[Source repository](https://github.com/charite-iaim/mcp-risk-server).
 The [source article](https://doi.org/10.1093/ehjdh/ztag124) states that anonymized
 data are available on reasonable request to the corresponding author.
 
 These results supplement the manuscript
 "Evidence-grounded CHA2DS2-VA extraction from German clinical letters using
 locally deployable language models".
-[Supplement overview](../cardiode/additional_results.md).
+[Repository README](../../README.md#supplementary-results).
 
 ## Score Metrics
 
@@ -62,7 +63,7 @@ three exactly correct scores for each model.
 After age correction, LoRA had 26 criterion errors: C (13), V (6), H (5),
 D (1), and S2 (1). C and V account for 19/26 (73%) of these errors.
 
-## Context Against Roeschl Et Al.
+## Context Against Roeschl et al.
 
 Their GPT-OSS 120B CHA2DS2-VASc pipeline achieved RMSE 0.39 (95% CI 0.31-0.47)
 and alpha 0.94 (95% CI 0.83-1.00), compared with 0.4025 and 0.9159 for our
