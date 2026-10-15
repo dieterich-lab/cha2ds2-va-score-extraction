@@ -1,13 +1,18 @@
-# CARDIO:DE Additional Experiment Results
+# CARDIO:DE and Charite Additional Experiment Results
 
 This file provides supplementary result documentation for the manuscript
 "Evidence-grounded CHA2DS2-VA extraction from German clinical letters using
-locally deployable language models". It contains additional results and metrics, including CARDIO:DE100 results, RMSE values, component-level accuracies, NER ablations, evidence plausibility, and evidence faithfulness.
+locally deployable language models". It contains additional results and metrics,
+including CARDIO:DE100 results, RMSE values, component-level accuracies, NER
+ablations, evidence plausibility, evidence faithfulness, and Charite data set
+experiments.
 
 Source summary:
 
 - `CARDIODE400_CV3`: 400 letters in three-fold cross-validation.
 - `CARDIODE100_FIXED_TEST`: 100 internally held-out letters.
+- Charite atrial fibrillation data set: updated 27B evaluation on 179 letters;
+  the earlier 170-letter evaluation is retained below.
 - Criteria-only systems: physician-curated rules, Qwen 3.5 9B/27B zero-shot,
   and Qwen 3.5 9B/27B LoRA.
 - Evidence-generating systems: Qwen 3.5 9B/27B zero-shot and LoRA, plus one
@@ -288,3 +293,100 @@ Faithfulness was evaluated for the five text-derived criteria (`C`, `H`, `D`,
 | Qwen 27B LoRA all evidence | H | 310 | 307 | 307 | 241 | 0.8850 | 1.0000 | 0.7850 | 0.2150 |
 | Qwen 27B LoRA all evidence | S2 | 51 | 46 | 40 | 34 | 0.1600 | 0.8696 | 0.7391 | 0.2609 |
 | Qwen 27B LoRA all evidence | V | 281 | 280 | 280 | 87 | 1.8775 | 1.0000 | 0.3107 | 0.6893 |
+
+## Charite Data Set Results
+
+Updated Qwen 3.5 27B results use all 179 letters. With the original reference,
+LoRA achieved 0.8380 exact score accuracy, 0.5069 RMSE, and 0.8981 Krippendorff
+alpha; the age-corrected sensitivity analysis yielded 0.8547, 0.4025, and
+0.9159, respectively. Predictions were unchanged. See the
+[updated Charite results](../roeschl/additional_results.md) for both references
+and per-criterion accuracies.
+
+### Earlier 170-Letter Evaluation
+
+These supplementary criteria-only CHA2DS2-VA experiments use 170 letters from
+the Charite atrial fibrillation data set, evaluated in three folds of 57, 57,
+and 56 letters. The tables report our Qwen 3.5 9B/27B zero-shot and LoRA
+experiments on this data set. Overall results pool all 170 evaluated letters.
+
+Source reference: Roeschl, Tobias, et al. "Development of an LLM pipeline
+exceeding physician-documented cardiovascular risk scores under routine
+clinical conditions." *European Heart Journal - Digital Health* 7(7) (2026):
+ztag124. [DOI: 10.1093/ehjdh/ztag124](https://doi.org/10.1093/ehjdh/ztag124).
+The source study evaluated CHA2DS2-VASc; the experiments documented here
+concern CHA2DS2-VA.
+
+Associated source repository:
+[charite-iaim/mcp-risk-server](https://github.com/charite-iaim/mcp-risk-server).
+The [source article](https://doi.org/10.1093/ehjdh/ztag124) states that anonymized
+data are available on reasonable request to the corresponding author.
+
+#### Overall Results
+
+| System | n letters | valid JSON rate | Exact score accuracy | All-criteria exact accuracy | score MAE | pooled micro-F1 | RMSE |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen 9B zero-shot | 170 | 1.0000 | 0.6706 | 0.6588 | 0.3765 | 0.9236 | 0.6945 |
+| Qwen 27B zero-shot | 170 | 1.0000 | 0.5471 | 0.5412 | 0.5059 | 0.8903 | 0.7896 |
+| Qwen 9B LoRA | 170 | 1.0000 | 0.8294 | 0.8176 | 0.1765 | 0.9615 | 0.4339 |
+| Qwen 27B LoRA | 170 | 1.0000 | 0.8294 | 0.8176 | 0.1765 | 0.9615 | 0.4201 |
+
+#### Per-Criterion Classification Results
+
+Support is the number of positive reference labels for each criterion.
+
+| System | Criterion | Precision | Recall | F1 | Support |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Qwen 9B zero-shot | C | 0.9524 | 0.7874 | 0.8621 | 127 |
+| Qwen 9B zero-shot | H | 0.9750 | 0.9669 | 0.9710 | 121 |
+| Qwen 9B zero-shot | A2 | 1.0000 | 0.9750 | 0.9873 | 40 |
+| Qwen 9B zero-shot | D | 0.9524 | 0.7692 | 0.8511 | 26 |
+| Qwen 9B zero-shot | S2 | 0.8125 | 1.0000 | 0.8966 | 13 |
+| Qwen 9B zero-shot | V | 0.8378 | 0.9118 | 0.8732 | 34 |
+| Qwen 9B zero-shot | A | 1.0000 | 0.9306 | 0.9640 | 72 |
+| Qwen 27B zero-shot | C | 0.9545 | 0.4961 | 0.6528 | 127 |
+| Qwen 27B zero-shot | H | 0.9754 | 0.9835 | 0.9794 | 121 |
+| Qwen 27B zero-shot | A2 | 1.0000 | 0.9750 | 0.9873 | 40 |
+| Qwen 27B zero-shot | D | 0.9630 | 1.0000 | 0.9811 | 26 |
+| Qwen 27B zero-shot | S2 | 1.0000 | 1.0000 | 1.0000 | 13 |
+| Qwen 27B zero-shot | V | 1.0000 | 0.7647 | 0.8667 | 34 |
+| Qwen 27B zero-shot | A | 1.0000 | 0.9306 | 0.9640 | 72 |
+| Qwen 9B LoRA | C | 0.9313 | 0.9606 | 0.9457 | 127 |
+| Qwen 9B LoRA | H | 0.9835 | 0.9835 | 0.9835 | 121 |
+| Qwen 9B LoRA | A2 | 1.0000 | 0.9750 | 0.9873 | 40 |
+| Qwen 9B LoRA | D | 0.9583 | 0.8846 | 0.9200 | 26 |
+| Qwen 9B LoRA | S2 | 1.0000 | 1.0000 | 1.0000 | 13 |
+| Qwen 9B LoRA | V | 1.0000 | 0.8529 | 0.9206 | 34 |
+| Qwen 9B LoRA | A | 1.0000 | 0.9306 | 0.9640 | 72 |
+| Qwen 27B LoRA | C | 0.9313 | 0.9606 | 0.9457 | 127 |
+| Qwen 27B LoRA | H | 0.9835 | 0.9835 | 0.9835 | 121 |
+| Qwen 27B LoRA | A2 | 1.0000 | 0.9750 | 0.9873 | 40 |
+| Qwen 27B LoRA | D | 0.9583 | 0.8846 | 0.9200 | 26 |
+| Qwen 27B LoRA | S2 | 1.0000 | 1.0000 | 1.0000 | 13 |
+| Qwen 27B LoRA | V | 1.0000 | 0.8529 | 0.9206 | 34 |
+| Qwen 27B LoRA | A | 1.0000 | 0.9306 | 0.9640 | 72 |
+
+#### Classification Averages
+
+Micro, macro, weighted, and samples averages are taken from pooled
+classification reports. Aggregate support is the sum of positive reference
+criterion labels (433).
+
+| System | Average | Precision | Recall | F1 | Support |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Qwen 9B zero-shot | micro avg | 0.9556 | 0.8938 | 0.9236 | 433 |
+| Qwen 9B zero-shot | macro avg | 0.9329 | 0.9058 | 0.9150 | 433 |
+| Qwen 9B zero-shot | weighted avg | 0.9578 | 0.8938 | 0.9223 | 433 |
+| Qwen 9B zero-shot | samples avg | 0.8495 | 0.8119 | 0.8169 | 433 |
+| Qwen 27B zero-shot | micro avg | 0.9806 | 0.8152 | 0.8903 | 433 |
+| Qwen 27B zero-shot | macro avg | 0.9847 | 0.8785 | 0.9188 | 433 |
+| Qwen 27B zero-shot | weighted avg | 0.9776 | 0.8152 | 0.8737 | 433 |
+| Qwen 27B zero-shot | samples avg | 0.8642 | 0.7436 | 0.7859 | 433 |
+| Qwen 9B LoRA | micro avg | 0.9717 | 0.9515 | 0.9615 | 433 |
+| Qwen 9B LoRA | macro avg | 0.9819 | 0.9410 | 0.9602 | 433 |
+| Qwen 9B LoRA | weighted avg | 0.9727 | 0.9515 | 0.9613 | 433 |
+| Qwen 9B LoRA | samples avg | 0.8877 | 0.8709 | 0.8731 | 433 |
+| Qwen 27B LoRA | micro avg | 0.9717 | 0.9515 | 0.9615 | 433 |
+| Qwen 27B LoRA | macro avg | 0.9819 | 0.9410 | 0.9602 | 433 |
+| Qwen 27B LoRA | weighted avg | 0.9727 | 0.9515 | 0.9613 | 433 |
+| Qwen 27B LoRA | samples avg | 0.8877 | 0.8709 | 0.8731 | 433 |

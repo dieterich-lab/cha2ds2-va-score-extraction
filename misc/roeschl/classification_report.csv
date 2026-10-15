@@ -1,0 +1,45 @@
+System,Criterion,Precision,Recall,F1,Support
+Qwen 9B zero-shot,C,0.9524,0.7874,0.8621,127
+Qwen 9B zero-shot,H,0.9750,0.9669,0.9710,121
+Qwen 9B zero-shot,A2,1.0000,0.9750,0.9873,40
+Qwen 9B zero-shot,D,0.9524,0.7692,0.8511,26
+Qwen 9B zero-shot,S2,0.8125,1.0000,0.8966,13
+Qwen 9B zero-shot,V,0.8378,0.9118,0.8732,34
+Qwen 9B zero-shot,A,1.0000,0.9306,0.9640,72
+Qwen 27B zero-shot,C,0.9545,0.4961,0.6528,127
+Qwen 27B zero-shot,H,0.9754,0.9835,0.9794,121
+Qwen 27B zero-shot,A2,1.0000,0.9750,0.9873,40
+Qwen 27B zero-shot,D,0.9630,1.0000,0.9811,26
+Qwen 27B zero-shot,S2,1.0000,1.0000,1.0000,13
+Qwen 27B zero-shot,V,1.0000,0.7647,0.8667,34
+Qwen 27B zero-shot,A,1.0000,0.9306,0.9640,72
+Qwen 9B LoRA,C,0.9313,0.9606,0.9457,127
+Qwen 9B LoRA,H,0.9835,0.9835,0.9835,121
+Qwen 9B LoRA,A2,1.0000,0.9750,0.9873,40
+Qwen 9B LoRA,D,0.9583,0.8846,0.9200,26
+Qwen 9B LoRA,S2,1.0000,1.0000,1.0000,13
+Qwen 9B LoRA,V,1.0000,0.8529,0.9206,34
+Qwen 9B LoRA,A,1.0000,0.9306,0.9640,72
+Qwen 27B LoRA,C,0.9313,0.9606,0.9457,127
+Qwen 27B LoRA,H,0.9835,0.9835,0.9835,121
+Qwen 27B LoRA,A2,1.0000,0.9750,0.9873,40
+Qwen 27B LoRA,D,0.9583,0.8846,0.9200,26
+Qwen 27B LoRA,S2,1.0000,1.0000,1.0000,13
+Qwen 27B LoRA,V,1.0000,0.8529,0.9206,34
+Qwen 27B LoRA,A,1.0000,0.9306,0.9640,72
+Qwen 9B zero-shot,micro avg,0.9556,0.8938,0.9236,433
+Qwen 9B zero-shot,macro avg,0.9329,0.9058,0.9150,433
+Qwen 9B zero-shot,weighted avg,0.9578,0.8938,0.9223,433
+Qwen 9B zero-shot,samples avg,0.8495,0.8119,0.8169,433
+Qwen 27B zero-shot,micro avg,0.9806,0.8152,0.8903,433
+Qwen 27B zero-shot,macro avg,0.9847,0.8785,0.9188,433
+Qwen 27B zero-shot,weighted avg,0.9776,0.8152,0.8737,433
+Qwen 27B zero-shot,samples avg,0.8642,0.7436,0.7859,433
+Qwen 9B LoRA,micro avg,0.9717,0.9515,0.9615,433
+Qwen 9B LoRA,macro avg,0.9819,0.9410,0.9602,433
+Qwen 9B LoRA,weighted avg,0.9727,0.9515,0.9613,433
+Qwen 9B LoRA,samples avg,0.8877,0.8709,0.8731,433
+Qwen 27B LoRA,micro avg,0.9717,0.9515,0.9615,433
+Qwen 27B LoRA,macro avg,0.9819,0.9410,0.9602,433
+Qwen 27B LoRA,weighted avg,0.9727,0.9515,0.9613,433
+Qwen 27B LoRA,samples avg,0.8877,0.8709,0.8731,433

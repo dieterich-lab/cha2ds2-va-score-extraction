@@ -1,0 +1,5 @@
+System,Predicted evidence spans,Anchored predicted spans,Gold evidence spans,Matched predicted spans,Matched gold spans,Evidence grounding rate,Precision anchored,Precision strict,Recall coverage,F1 anchored,F1 strict,Criterion evidence sufficiency TP,Criterion evidence coverage gold positive
+Qwen 9B zero-shot all evidence,866,808,463,122,122,0.9330,0.1510,0.1409,0.2635,0.1920,0.1836,0.4498,0.4052
+Qwen 27B zero-shot all evidence,669,656,463,162,162,0.9806,0.2470,0.2422,0.3499,0.2895,0.2862,0.5943,0.5431
+Qwen 9B LoRA all evidence,436,434,463,380,380,0.9954,0.8756,0.8716,0.8207,0.8473,0.8454,0.9865,0.9440
+Qwen 27B LoRA all evidence,441,441,463,390,390,1.0000,0.8844,0.8844,0.8423,0.8628,0.8628,0.9955,0.9569

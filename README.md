@@ -31,7 +31,7 @@ CARDIO:DE is available for research use via [heiDATA: 10.11588/data/AFYQDY](http
 The corpus is split into `CARDIODE400_main` and `CARDIODE100_heldout`. CARDIODE100 annotations are kept in-house. Hence, for reproducibility the manuscript reports CARDIODE400 three-fold
 cross-validation results. Fixed
 CARDIODE400-train/CARDIODE100-test experiments are documented as supplementary
-ablations in [misc/cardiode/additional_results.md](misc/cardiode/additional_results.md)..
+ablations in [misc/cardiode/fixed_split_results.md](misc/cardiode/fixed_split_results.md).
 
 In our experiments LoRA adaptation improved criteria extraction more
 than scaling from 9B to 27B in the criteria-only setting. Evidence generation
@@ -53,10 +53,10 @@ output. MAE is the mean absolute error of the total score.
 | Qwen 9B LoRA | 0.905 / 0.860 | 0.120 / 0.188 | 0.985 / 0.977 | 0.982 / 0.971 |
 | Qwen 27B LoRA | 0.903 / 0.895 | **0.12** / 0.128 | 0.985 / 0.983 | 0.981 / 0.979 |
 
-Additional supplementary result tables, including fixed-test ablations,
-component-level accuracies, NER ablations, evidence plausibility, and evidence
-faithfulness, are available in
-[misc/cardiode/additional_results.md](misc/cardiode/additional_results.md).
+The [supplementary results overview](misc/cardiode/additional_results.md)
+links to CARDIO:DE400 score and criterion results, evidence plausibility and
+faithfulness, fixed-test and NER ablations, Charite experiments, and complete
+numerical reports in CSV format.
 
 ## Repository Layout
 

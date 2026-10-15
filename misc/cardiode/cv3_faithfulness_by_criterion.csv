@@ -1,0 +1,21 @@
+System,Criterion,full positive cases,evaluable cases,sufficiency preserved cases,comprehensiveness dropped cases,mean anchored evidence spans,sufficiency preservation rate,comprehensiveness drop rate,removed still positive rate
+Qwen 9B zero-shot all evidence,C,193,153,151,18,1.1550,0.9869,0.1176,0.8824
+Qwen 9B zero-shot all evidence,D,110,98,93,39,0.7250,0.9490,0.3980,0.6020
+Qwen 9B zero-shot all evidence,H,325,306,305,173,2.4025,0.9967,0.5654,0.4346
+Qwen 9B zero-shot all evidence,S2,52,45,42,38,0.4750,0.9333,0.8444,0.1556
+Qwen 9B zero-shot all evidence,V,312,279,273,41,3.5150,0.9785,0.1470,0.8530
+Qwen 27B zero-shot all evidence,C,175,145,143,48,1.2650,0.9862,0.3310,0.6690
+Qwen 27B zero-shot all evidence,D,108,104,102,50,0.7525,0.9808,0.4808,0.5192
+Qwen 27B zero-shot all evidence,H,320,313,312,208,1.9950,0.9968,0.6645,0.3355
+Qwen 27B zero-shot all evidence,S2,53,50,47,43,0.1950,0.9400,0.8600,0.1400
+Qwen 27B zero-shot all evidence,V,275,261,256,84,2.4525,0.9808,0.3218,0.6782
+Qwen 9B LoRA all evidence,C,171,162,161,53,1.3575,0.9938,0.3272,0.6728
+Qwen 9B LoRA all evidence,D,97,96,95,37,0.2900,0.9896,0.3854,0.6146
+Qwen 9B LoRA all evidence,H,310,305,304,239,0.9025,0.9967,0.7836,0.2164
+Qwen 9B LoRA all evidence,S2,45,41,32,37,0.1625,0.7805,0.9024,0.0976
+Qwen 9B LoRA all evidence,V,285,281,281,98,1.9275,1.0000,0.3488,0.6512
+Qwen 27B LoRA all evidence,C,178,172,172,64,1.4575,1.0000,0.3721,0.6279
+Qwen 27B LoRA all evidence,D,100,100,98,49,0.3100,0.9800,0.4900,0.5100
+Qwen 27B LoRA all evidence,H,310,307,307,241,0.8850,1.0000,0.7850,0.2150
+Qwen 27B LoRA all evidence,S2,51,46,40,34,0.1600,0.8696,0.7391,0.2609
+Qwen 27B LoRA all evidence,V,281,280,280,87,1.8775,1.0000,0.3107,0.6893

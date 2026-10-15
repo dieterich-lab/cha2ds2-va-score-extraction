@@ -1,0 +1,21 @@
+System,Criterion,Predicted evidence spans,Anchored predicted spans,Gold evidence spans,Matched predicted spans,Evidence grounding rate,Precision anchored,Precision strict,Recall coverage,F1 anchored,F1 strict,Criterion evidence sufficiency TP,Criterion evidence coverage gold positive
+Qwen 9B zero-shot all evidence,C,507,462,595,160,0.9112,0.3463,0.3156,0.2689,0.3027,0.2904,0.7172,0.6228
+Qwen 9B zero-shot all evidence,D,339,290,123,44,0.8555,0.1517,0.1298,0.3577,0.2131,0.1905,0.4348,0.4082
+Qwen 9B zero-shot all evidence,H,978,961,387,119,0.9826,0.1238,0.1217,0.3075,0.1766,0.1744,0.3688,0.3581
+Qwen 9B zero-shot all evidence,S2,199,190,67,8,0.9548,0.0421,0.0402,0.1194,0.0623,0.0602,0.1951,0.1569
+Qwen 9B zero-shot all evidence,V,1538,1406,821,228,0.9142,0.1622,0.1482,0.2777,0.2048,0.1933,0.5811,0.5442
+Qwen 27B zero-shot all evidence,C,534,506,595,180,0.9476,0.3557,0.3371,0.3025,0.3270,0.3189,0.7319,0.6048
+Qwen 27B zero-shot all evidence,D,327,301,123,62,0.9205,0.2060,0.1896,0.5041,0.2925,0.2756,0.5918,0.5918
+Qwen 27B zero-shot all evidence,H,798,798,387,197,1.0000,0.2469,0.2469,0.5090,0.3325,0.3325,0.5696,0.5677
+Qwen 27B zero-shot all evidence,S2,80,78,67,10,0.9750,0.1282,0.1250,0.1493,0.1379,0.1361,0.2174,0.1961
+Qwen 27B zero-shot all evidence,V,995,981,821,238,0.9859,0.2426,0.2392,0.2899,0.2642,0.2621,0.5900,0.5442
+Qwen 9B LoRA all evidence,C,563,543,595,426,0.9645,0.7845,0.7567,0.7160,0.7487,0.7358,0.9870,0.9102
+Qwen 9B LoRA all evidence,D,116,116,123,101,1.0000,0.8707,0.8707,0.8211,0.8452,0.8452,0.9368,0.9082
+Qwen 9B LoRA all evidence,H,361,361,387,331,1.0000,0.9169,0.9169,0.8553,0.8850,0.8850,0.9967,0.9742
+Qwen 9B LoRA all evidence,S2,65,65,67,48,1.0000,0.7385,0.7385,0.7164,0.7273,0.7273,0.9756,0.7843
+Qwen 9B LoRA all evidence,V,772,771,821,647,0.9987,0.8392,0.8381,0.7881,0.8128,0.8123,0.9928,0.9717
+Qwen 27B LoRA all evidence,C,590,583,595,466,0.9881,0.7993,0.7898,0.7832,0.7912,0.7865,1.0000,0.9581
+Qwen 27B LoRA all evidence,D,124,124,123,105,1.0000,0.8468,0.8468,0.8537,0.8502,0.8502,0.9388,0.9388
+Qwen 27B LoRA all evidence,H,354,354,387,336,1.0000,0.9492,0.9492,0.8682,0.9069,0.9069,0.9967,0.9839
+Qwen 27B LoRA all evidence,S2,66,64,67,52,0.9697,0.8125,0.7879,0.7761,0.7939,0.7820,0.9778,0.8627
+Qwen 27B LoRA all evidence,V,754,751,821,649,0.9960,0.8642,0.8607,0.7905,0.8257,0.8241,0.9928,0.9788

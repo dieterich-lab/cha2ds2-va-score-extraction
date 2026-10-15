@@ -1,0 +1,5 @@
+System,criterion cases,full positive cases,evaluable cases,sufficiency preserved cases,comprehensiveness dropped cases,mean anchored evidence spans,full JSON valid rate,sufficiency JSON valid rate,comprehensiveness JSON valid rate,sufficiency preservation rate,comprehensiveness drop rate,removed still positive rate
+Qwen 9B zero-shot all evidence,2000,992,881,864,309,1.6545,1.0000,1.0000,1.0000,0.9807,0.3507,0.6493
+Qwen 27B zero-shot all evidence,2000,931,873,860,433,1.3320,1.0000,1.0000,1.0000,0.9851,0.4960,0.5040
+Qwen 9B LoRA all evidence,2000,908,885,873,464,0.9280,1.0000,1.0000,1.0000,0.9864,0.5243,0.4757
+Qwen 27B LoRA all evidence,2000,920,905,897,475,0.9380,1.0000,1.0000,1.0000,0.9912,0.5249,0.4751
