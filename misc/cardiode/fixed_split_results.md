@@ -10,7 +10,7 @@ are held in-house and are not published.
 The corpus is available for research use via
 [heiDATA: DOI 10.11588/data/AFYQDY](https://doi.org/10.11588/data/AFYQDY).
 See the [supplement overview](additional_results.md) for the reproducible
-CARDIO:DE400 evaluation and [score metric definitions](additional_results.md#score-and-criterion-metrics).
+CARDIO:DE400 evaluation and [score metric definitions](additional_results.md#metric-definitions).
 
 ## Score Results
 

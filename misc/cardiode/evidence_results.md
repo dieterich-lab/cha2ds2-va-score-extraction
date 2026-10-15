@@ -20,7 +20,7 @@ The Qwen 3.8 27B LoRA run is an additional score-level experiment. The
 plausibility and faithfulness tables below cover Qwen 3.5 9B/27B only.
 [Complete score metrics](cv3_score_results.csv) and
 [per-criterion accuracies](cv3_per_criterion_accuracy.csv) include both output types.
-Score metric definitions are in the [overview](additional_results.md#score-and-criterion-metrics).
+Score metric definitions are in the [overview](additional_results.md#metric-definitions).
 
 ## Evidence Metrics
 
