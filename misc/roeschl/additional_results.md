@@ -71,13 +71,5 @@ age-corrected 27B LoRA evaluation
 Different score definitions and the revised age reference preclude claims of
 equivalence or superiority.
 
-## Earlier 170-Letter Evaluation
-
-Earlier Qwen 9B/27B results are retained in the
-[170-letter tables](../cardiode/additional_results.md#earlier-170-letter-evaluation),
-[score summary](score_results.csv), and
-[classification report](classification_report.csv).
-Those reports describe the earlier subset, not the updated 179-letter evaluation.
-
 The updated numerical results above were supplied as evaluation summaries;
 model inference was not rerun for this documentation update.

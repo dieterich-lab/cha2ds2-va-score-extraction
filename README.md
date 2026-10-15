@@ -53,10 +53,24 @@ output. MAE is the mean absolute error of the total score.
 | Qwen 9B LoRA | 0.905 / 0.860 | 0.120 / 0.188 | 0.985 / 0.977 | 0.982 / 0.971 |
 | Qwen 27B LoRA | 0.903 / 0.895 | **0.12** / 0.128 | 0.985 / 0.983 | 0.981 / 0.979 |
 
-The [supplementary results overview](misc/cardiode/additional_results.md)
-links to CARDIO:DE400 score and criterion results, evidence plausibility and
-faithfulness, fixed-test and NER ablations, Charite experiments, and complete
-numerical reports in CSV format.
+## Supplementary Results
+
+The result documents in `misc/` supplement the manuscript:
+
+| Results | Evaluation |
+| --- | --- |
+| [Additional score and criterion results](misc/cardiode/additional_results.md) | CARDIO:DE400 three-fold cross-validation |
+| [Evidence plausibility and faithfulness](misc/cardiode/evidence_results.md) | CARDIO:DE400 evidence-generating runs |
+| [Fixed-split results and NER ablation](misc/cardiode/fixed_split_results.md) | CARDIO:DE400 train / CARDIO:DE100 test |
+| [Charite results](misc/roeschl/additional_results.md) | Qwen 3.5 27B on all 179 letters, with original and age-corrected references |
+
+On Charite, 27B LoRA achieved exact-score accuracy 0.8380, RMSE 0.5069, and
+Krippendorff alpha 0.8981 against the original reference. The age-corrected
+sensitivity analysis yielded 0.8547, 0.4025, and 0.9159, respectively, with
+unchanged predictions; it does not replace the original benchmark reference.
+
+The CARDIO:DE evidence and fixed-split documents link to detailed CSV reports
+with additional metrics, counts, and classification results.
 
 ## Repository Layout
 
@@ -87,6 +101,9 @@ numerical reports in CSV format.
 |           |-- 11_qwen35_27b_zero_shot_all_evidence_faithfulness.py
 |           |-- 12_qwen35_9b_lora_all_evidence_faithfulness.py
 |           `-- 13_qwen35_27b_lora_all_evidence_faithfulness.py
+|-- misc/
+|   |-- cardiode/
+|   `-- roeschl/
 |-- requirements.txt
 `-- LICENSE
 ```
