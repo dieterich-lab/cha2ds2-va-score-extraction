@@ -27,6 +27,9 @@ TODO
 - Evidence metrics: quotation grounding, span-level quotation precision/recall/F1
   against expert annotations, and post-hoc sufficiency/comprehensiveness tests.
 
+The [annotation guidelines](docs/annotation_guidelines_chadsva.pdf) document the
+CARDIO:DE CHA2DS2-VA annotation protocol.
+
 CARDIO:DE is available for research use via [heiDATA: 10.11588/data/AFYQDY](https://doi.org/10.11588/data/AFYQDY).
 The corpus is split into `CARDIODE400_main` and `CARDIODE100_heldout`. CARDIODE100 annotations are kept in-house. Hence, for reproducibility the manuscript reports CARDIODE400 three-fold
 cross-validation results. Fixed
@@ -71,6 +74,8 @@ with additional metrics, counts, and classification results.
 
 ```text
 .
+|-- docs/
+|   `-- annotation_guidelines_chadsva.pdf
 |-- notebooks/
 |   `-- data_preparation.ipynb
 |-- prompts/
