@@ -62,12 +62,7 @@ The result documents in `misc/` supplement the manuscript:
 | [Additional score and criterion results](misc/cardiode/additional_results.md) | CARDIO:DE400 three-fold cross-validation |
 | [Evidence plausibility and faithfulness](misc/cardiode/evidence_results.md) | CARDIO:DE400 evidence-generating runs |
 | [Fixed-split results and NER ablation](misc/cardiode/fixed_split_results.md) | CARDIO:DE400 train / CARDIO:DE100 test |
-| [Charite results](misc/roeschl/additional_results.md) | Qwen 3.5 27B on all 179 letters, with original and age-corrected references |
-
-On Charite, 27B LoRA achieved exact-score accuracy 0.8380, RMSE 0.5069, and
-Krippendorff alpha 0.8981 against the original reference. The age-corrected
-sensitivity analysis yielded 0.8547, 0.4025, and 0.9159, respectively, with
-unchanged predictions; it does not replace the original benchmark reference.
+| [Exploratory results on Roeschl et al. data](misc/roeschl/additional_results.md) | Qwen 3.5 27B on all 179 letters, with original and age-corrected references |
 
 The CARDIO:DE evidence and fixed-split documents link to detailed CSV reports
 with additional metrics, counts, and classification results.
